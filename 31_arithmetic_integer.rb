@@ -1,7 +1,7 @@
-puts '==> Enter the first number:'
+puts '==> Enter the first number=>'
 num1 = gets.to_i
 
-puts '==> Enter the second number:'
+puts '==> Enter the second number=>'
 num2 = gets.to_i
 
 puts "==> #{num1} + #{num2} = #{num1 + num2}"

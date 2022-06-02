@@ -1,23 +1,11 @@
-# Original solution
-=begin
 def leap_year?(year)
-  if year % 400 == 0
+  if year < 1752 && year % 4 == 0
+    true
+  elsif year % 400 == 0
     true
   elsif year % 100 == 0
     false
   elsif year % 4 == 0
-    true
-  else
-    false
-  end
-end
-=end
-
-# Alternative solution for further exploration
-
-def leap_year?(year)
-  if year % 4 == 0
-    return false if (year % 100 == 0) && (year % 400 != 0)
     true
   else
     false
@@ -33,7 +21,7 @@ puts leap_year?(240001) == false
 puts leap_year?(2000) == true
 puts leap_year?(1900) == false
 puts leap_year?(1752) == true
-puts leap_year?(1700) == false
+puts leap_year?(1700) == true
 puts leap_year?(1) == false
-puts leap_year?(100) == false
+puts leap_year?(100) == true
 puts leap_year?(400) == true
